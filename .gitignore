@@ -1,5 +1,17 @@
+# Python virtual environments
 server/venv/
+client/venv/
+
+# Python cache
 server/__pycache__/
+client/__pycache__/
+__pycache__/
+
+# Environment variables
 server/.env
+client/.env
+.env
+
+# Frontend
 client/node_modules/
 client/dist/
