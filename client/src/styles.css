@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: #fafaf8;
+  color: #1a1a1a;
+}
+
+.container {
+  max-width: 680px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  border-bottom: 3px solid #1a1a1a;
+  padding-bottom: 16px;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.header p {
+  font-size: 13px;
+  color: #888;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Input */
+.input-wrapper {
+  margin-bottom: 36px;
+}
+
+.input-wrapper textarea {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 15px;
+  font-family: 'Georgia', serif;
+  border: none;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  resize: none;
+  outline: none;
+  color: #1a1a1a;
+  line-height: 1.7;
+  min-height: 100px;
+}
+
+.input-wrapper textarea::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+.analyze-btn {
+  margin-top: 14px;
+  padding: 8px 20px;
+  background: #1a1a1a;
+  color: #fafaf8;
+  border: none;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.analyze-btn:hover {
+  opacity: 0.8;
+}
+
+.analyze-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Result */
+.result-card {
+  margin-bottom: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #ccc;
+}
+
+.verdict {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.verdict.fake { color: #1a1a1a; }
+.verdict.real { color: #1a1a1a; }
+.verdict.uncertain { color: #1a1a1a; }
+
+.verdict-tag {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  margin-bottom: 14px;
+}
+
+.verdict-tag.fake {
+  background: #1a1a1a;
+  color: #fafaf8;
+}
+
+.verdict-tag.real {
+  background: #fafaf8;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.verdict-tag.uncertain {
+  background: #f0f0f0;
+  color: #888;
+  border: 1px solid #ccc;
+}
+
+.confidence-label {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.confidence-bar-wrapper {
+  background: #efefef;
+  height: 3px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.confidence-bar {
+  height: 100%;
+  background: #1a1a1a;
+  transition: width 0.5s ease;
+}
+
+.disclaimer {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: #bbb;
+  font-style: italic;
+  border-top: 1px solid #efefef;
+  padding-top: 12px;
+  margin-top: 8px;
+}
+
+/* History */
+.history-section {
+  border-top: 1px solid #ccc;
+  padding-top: 24px;
+}
+
+.history-section h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.history-empty {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #bbb;
+  font-style: italic;
+}
+
+.history-item {
+  display: grid;
+  grid-template-columns: 120px 1fr 60px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 12px;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-verdict {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.history-verdict.fake { color: #1a1a1a; }
+.history-verdict.real { color: #555; }
+.history-verdict.uncertain { color: #aaa; }
+
+.history-text {
+  font-size: 12px;
+  color: #888;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-style: italic;
+}
+
+.history-confidence {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: #bbb;
+  text-align: right;
+}
