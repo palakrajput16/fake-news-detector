@@ -46,16 +46,23 @@ This is worth knowing before using it. It is a useful tool for obvious misinform
 **Backend:**
 
 cd server
+
 python -m venv venv
+
 venv\Scripts\activate        # Windows
+
 source venv/bin/activate     # Mac/Linux
+
 pip install -r requirements.txt
+
 python app.py
 
 **Frontend:**
 
 cd client
+
 npm install
+
 npm run dev
 
 The first time you run the backend, it will download the model (~440MB). After that it loads in a few seconds.
